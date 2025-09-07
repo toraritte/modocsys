@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
+  <title>Schedule of Benefits</title>
+  <chapter>
+    <title>Comprehensive Medical Benefit</title>
+    <section>
+      <title>Deductibles</title>
+      <itemizedlist>
+        <listitem>
+          <para>Calendar Year Deductible: $1,000 per person; $3,000 per family</para>
+        </listitem>
+        <listitem>
+          <para>Non-PPO Hospital Deductible: $500 per person (in addition to calendar year deductible)</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section>
+      <title>Out-of-Pocket Maximums</title>
+      <itemizedlist>
+        <listitem>
+          <para>PPO Major Medical: $5,000 per person; $10,000 per family</para>
+        </listitem>
+        <listitem>
+          <para>PPO Prescription Drugs: $1,850 per person; $3,700 per family</para>
+        </listitem>
+        <listitem>
+          <para>Non-PPO Additional: $2,000 per person; $11,300 per family</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section>
+      <title>Plan Maximums</title>
+      <itemizedlist>
+        <listitem>
+          <para>Chiropractic: 12 visits/person <emphasis>CPT: 98940, 98941, 98942; SNOMED: 44808001</emphasis></para>
+        </listitem>
+        <listitem>
+          <para>Rehab Physical Therapy: 20 visits/person <emphasis>CPT: 97110, 97112, 97116; SNOMED: 428191000124101</emphasis></para>
+        </listitem>
+        <listitem>
+          <para>Rehab Speech Therapy: 30 visits/person <emphasis>CPT: 92507, 92521; SNOMED: 40617009</emphasis></para>
+        </listitem>
+        <listitem>
+          <para>Habilitative Therapy: 30 speech therapy visits, 70 combined <emphasis>CPT: 97535, 97530, 97532; SNOMED: 386053000</emphasis></para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section>
+      <title>Special Benefit Maximums</title>
+      <itemizedlist>
+        <listitem>
+          <para>Hearing Aid: $600/person every 3 years <emphasis>HCPCS: V5000, V5010; SNOMED: 25744000</emphasis></para>
+        </listitem>
+        <listitem>
+          <para>Infertility Treatment: $10,000/person lifetime <emphasis>CPT: S4011, S4015, S4016; ICD-10: N97; SNOMED: 23695001</emphasis></para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Prescription Drug Benefits</title>
+    <section>
+      <itemizedlist>
+        <listitem>
+          <para>Retail Pharmacy (30-day supply): Generic (25%, $5 min/$20 max), Single Source Brand (30%, $25 min/$100 max), Multi-Source Brand (35%, $31.25 min/$125 max)</para>
+        </listitem>
+        <listitem>
+          <para>Mail Order: 1-30 days, 31-60 days, 61-90 days (see plan for details)</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Dental Benefits</title>
+    <section>
+      <itemizedlist>
+        <listitem>
+          <para>Calendar Year Maximum: $1,000/person</para>
+        </listitem>
+        <listitem>
+          <para>Deductible: $25/person</para>
+        </listitem>
+        <listitem>
+          <para>Routine Dental: 100% after deductible <emphasis>CDT: D0120, D1110; SNOMED: 23410000</emphasis></para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Vision Benefits</title>
+    <section>
+      <itemizedlist>
+        <listitem>
+          <para>Eye Exam: 100% in network, up to $25 non-network <emphasis>CPT: 92004, 92014; SNOMED: 1621000133107</emphasis></para>
+        </listitem>
+        <listitem>
+          <para>Lenses/Frames/Contacts: Up to $100 every 2 years <emphasis>HCPCS: V2020, V2520; SNOMED: 387697009</emphasis></para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </chapter>
+  <chapter>
+    <title>Death & Dismemberment</title>
+    <section>
+      <itemizedlist>
+        <listitem>
+          <para>Death Benefit: $20,000</para>
+        </listitem>
+        <listitem>
+          <para>Accidental Death & Dismemberment: $10,000–$20,000 (see plan for details)</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </chapter>
+</book>
