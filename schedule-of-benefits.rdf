@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ben="http://example.org/benefit#"
+         xmlns:snomed="http://snomed.info/id/"
+         xmlns:icd10="http://hl7.org/fhir/sid/icd-10/"
+         xmlns:cpt="http://www.ama-assn.org/go/cpt/"
+         xmlns:hcpcs="http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/"
+         xmlns:cdt="http://www.ada.org/en/publications/cdt/">
+
+  <!-- Comprehensive Medical Benefit -->
+  <ben:ComprehensiveMedicalBenefit rdf:about="ActiveEmployeesAndDependents">
+    <ben:Deductibles>
+      <ben:CalendarYearDeductible perPerson="1000" perFamily="3000"/>
+      <ben:NonPPOHospitalDeductible perPerson="500"/>
+    </ben:Deductibles>
+    <ben:OutOfPocketMaximums>
+      <ben:PPO_MajorMedical perPerson="5000" perFamily="10000"/>
+      <ben:PPO_PrescriptionDrugs perPerson="1850" perFamily="3700"/>
+      <ben:NonPPOAdditional perPerson="2000" perFamily="11300"/>
+    </ben:OutOfPocketMaximums>
+    <ben:PlanMaximums>
+      <ben:Chiropractic visits="12">
+        <ben:Code system="CPT" value="98940"/>
+        <ben:Code system="CPT" value="98941"/>
+        <ben:Code system="CPT" value="98942"/>
+        <ben:Code system="SNOMED" value="44808001"/>
+      </ben:Chiropractic>
+      <ben:RehabPhysicalTherapy visits="20">
+        <ben:Code system="CPT" value="97110"/>
+        <ben:Code system="CPT" value="97112"/>
+        <ben:Code system="CPT" value="97116"/>
+        <ben:Code system="SNOMED" value="428191000124101"/>
+      </ben:RehabPhysicalTherapy>
+      <ben:RehabSpeechTherapy visits="30">
+        <ben:Code system="CPT" value="92507"/>
+        <ben:Code system="CPT" value="92521"/>
+        <ben:Code system="SNOMED" value="40617009"/>
+      </ben:RehabSpeechTherapy>
+      <ben:HabilitativeTherapy speechTherapyVisits="30" combinedSpeechPhysicalTherapy="70">
+        <ben:Code system="CPT" value="97535"/>
+        <ben:Code system="CPT" value="97530"/>
+        <ben:Code system="CPT" value="97532"/>
+        <ben:Code system="SNOMED" value="386053000"/>
+      </ben:HabilitativeTherapy>
+    </ben:PlanMaximums>
+    <ben:SpecialBenefitMaximums>
+      <ben:HospitalDailyRoomBoard rate="singleRoom"/>
+      <ben:NonPPOIntensiveCare rate="tripleSemiPrivate"/>
+      <ben:HearingAidProgram amount="600" period="3years">
+        <ben:Code system="HCPCS" value="V5000"/>
+        <ben:Code system="HCPCS" value="V5010"/>
+        <ben:Code system="SNOMED" value="25744000"/>
+      </ben:HearingAidProgram>
+      <ben:InfertilityTreatment amount="10000" period="lifetime">
+        <ben:Code system="CPT" value="S4011"/>
+        <ben:Code system="CPT" value="S4015"/>
+        <ben:Code system="CPT" value="S4016"/>
+        <ben:Code system="ICD-10" value="N97"/>
+        <ben:Code system="SNOMED" value="23695001"/>
+      </ben:InfertilityTreatment>
+    </ben:SpecialBenefitMaximums>
+    <ben:TypeOfService>
+      <ben:OutpatientPreAdmissionTests PPO="100%" NonPPO="100%">
+        <ben:Code system="CPT" value="36415"/>
+        <ben:Code system="CPT" value="80048"/>
+        <ben:Code system="CPT" value="80053"/>
+        <ben:Code system="SNOMED" value="104934005"/>
+      </ben:OutpatientPreAdmissionTests>
+      <ben:HospitalSurgeriesInpatientOutpatient PPO="80%" NonPPO="65%">
+        <ben:Code system="CPT" value="47562"/>
+        <ben:Code system="SNOMED" value="387713003"/>
+      </ben:HospitalSurgeriesInpatientOutpatient>
+      <ben:EmergencyRoom PPO="80%" NonPPO="80%">
+        <ben:Code system="CPT" value="99281"/>
+        <ben:Code system="CPT" value="99282"/>
+        <ben:Code system="CPT" value="99283"/>
+        <ben:Code system="CPT" value="99284"/>
+        <ben:Code system="CPT" value="99285"/>
+        <ben:Code system="SNOMED" value="52734007"/>
+      </ben:EmergencyRoom>
+      <ben:PreventiveServices PPO="100%" NonPPO="0%">
+        <ben:Code system="CPT" value="99381"/>
+        <ben:Code system="CPT" value="99382"/>
+        <ben:Code system="CPT" value="99383"/>
+        <ben:Code system="CPT" value="99384"/>
+        <ben:Code system="CPT" value="99385"/>
+        <ben:Code system="ICD-10" value="Z00.00"/>
+        <ben:Code system="SNOMED" value="185349003"/>
+      </ben:PreventiveServices>
+      <ben:NonHospitalServices PPO="80%" NonPPO="65%">
+        <ben:Code system="CPT" value="99201"/>
+        <ben:Code system="CPT" value="99202"/>
+        <ben:Code system="CPT" value="99203"/>
+        <ben:Code system="CPT" value="80050"/>
+        <ben:Code system="SNOMED" value="185389009"/>
+      </ben:NonHospitalServices>
+      <ben:Chiropractic PPO="80%" NonPPO="65%" visits="12">
+        <ben:Code system="CPT" value="98940"/>
+        <ben:Code system="CPT" value="98941"/>
+        <ben:Code system="CPT" value="98942"/>
+        <ben:Code system="SNOMED" value="44808001"/>
+      </ben:Chiropractic>
+      <ben:SubstanceAbuseTreatment_Inpatient PPO="90%" NonPPO="70%">
+        <ben:Code system="CPT" value="H0001"/>
+        <ben:Code system="CPT" value="H0005"/>
+        <ben:Code system="ICD-10" value="F10.20"/>
+        <ben:Code system="SNOMED" value="1101121000119107"/>
+      </ben:SubstanceAbuseTreatment_Inpatient>
+      <ben:SubstanceAbuseTreatment_Outpatient PPO="80%" NonPPO="70%">
+        <ben:Code system="CPT" value="H0005"/>
+        <ben:Code system="ICD-10" value="F10.20"/>
+        <ben:Code system="SNOMED" value="1101121000119107"/>
+      </ben:SubstanceAbuseTreatment_Outpatient>
+      <ben:MentalHealthTreatment_Inpatient PPO="90%" NonPPO="70%">
+        <ben:Code system="CPT" value="90832"/>
+        <ben:Code system="CPT" value="90834"/>
+        <ben:Code system="ICD-10" value="F32.9"/>
+        <ben:Code system="SNOMED" value="35489007"/>
+      </ben:MentalHealthTreatment_Inpatient>
+      <ben:MentalHealthTreatment_Outpatient PPO="80%" NonPPO="70%">
+        <ben:Code system="CPT" value="90837"/>
+        <ben:Code system="ICD-10" value="F32.9"/>
+        <ben:Code system="SNOMED" value="35489007"/>
+      </ben:MentalHealthTreatment_Outpatient>
+      <ben:HearingAidProgram PPO="100%" NonPPO="100%" amount="600" period="3years">
+        <ben:Code system="HCPCS" value="V5000"/>
+        <ben:Code system="HCPCS" value="V5010"/>
+        <ben:Code system="SNOMED" value="25744000"/>
+      </ben:HearingAidProgram>
+      <ben:AmbulatorySurgicalCenter PPO="80%" NonPPO="0%">
+        <ben:Code system="PlaceOfService" value="24"/>
+        <ben:Code system="SNOMED" value="225728007"/>
+      </ben:AmbulatorySurgicalCenter>
+      <ben:OtherCoveredMedicalExpenses PPO="80%" NonPPO="65%"/>
+      <ben:ObesityRelatedExpenses PPO="50%" NonPPO="0%">
+        <ben:Code system="ICD-10" value="E66"/>
+        <ben:Code system="SNOMED" value="414916001"/>
+      </ben:ObesityRelatedExpenses>
+    </ben:TypeOfService>
+  </ben:ComprehensiveMedicalBenefit>
+
+  <!-- Prescription Drug Benefits -->
+  <ben:PrescriptionDrugBenefit rdf:about="ActiveEmployeesAndDependents">
+    <ben:ParticipatingRetailPharmacy>
+      <ben:GenericMedication percent="25%" min="5" max="20"/>
+      <ben:SingleSourceBrandDrug percent="30%" min="25" max="100"/>
+      <ben:MultiSourceBrandDrug percent="35%" min="31.25" max="125"/>
+      <ben:GenericMedication_RetailAfterTwo percent="25%" min="5" max="20" surcharge="5"/>
+      <ben:SingleSourceBrandDrug_RetailAfterTwo percent="30%" min="25" max="100" surcharge="15"/>
+      <ben:MultiSourceBrandDrug_RetailAfterTwo percent="35%" min="31.25" max="125" surcharge="15"/>
+    </ben:ParticipatingRetailPharmacy>
+    <ben:MailOrderService>
+      <ben:GenericMedication_1to30Day percent="25%" min="5" max="20"/>
+      <ben:GenericMedication_31to60Day percent="25%" min="10" max="40"/>
+      <ben:GenericMedication_61to90Day percent="25%" min="15" max="60"/>
+      <ben:SingleSourceBrandDrug_1to30Day percent="30%" min="25" max="100"/>
+      <ben:SingleSourceBrandDrug_31to60Day percent="30%" min="50" max="200"/>
+      <ben:SingleSourceBrandDrug_61to90Day percent="30%" min="75" max="300"/>
+      <ben:MultiSourceBrandDrug_1to30Day percent="35%" min="31.25" max="125" surcharge=""/>
+      <ben:MultiSourceBrandDrug_31to60Day percent="35%" min="62.5" max="250" surcharge=""/>
+      <ben:MultiSourceBrandDrug_61to90Day percent="35%" min="93.75" max="375" surcharge=""/>
+    </ben:MailOrderService>
+  </ben:PrescriptionDrugBenefit>
+
+  <!-- Dental Benefits -->
+  <ben:DentalBenefit rdf:about="ActiveEmployeesAndDependents">
+    <ben:CalendarYearMaximum amount="1000"/>
+    <ben:RoutineDentalDeductible amount="25"/>
+    <ben:CopaymentPercentages>
+      <ben:RoutineDentalServices percent="100" afterDeductible="true">
+        <ben:Code system="CDT" value="D0120"/>
+        <ben:Code system="CDT" value="D1110"/>
+        <ben:Code system="SNOMED" value="23410000"/>
+      </ben:RoutineDentalServices>
+      <ben:BasicDentalServices percent="50">
+        <ben:Code system="CDT" value="D2140"/>
+        <ben:Code system="CDT" value="D2150"/>
+        <ben:Code system="SNOMED" value="27441002"/>
+      </ben:BasicDentalServices>
+      <ben:MajorDentalServicesOrthodontia covered="false">
+        <ben:Code system="CDT" value="D8080"/>
+        <ben:Code system="CDT" value="D8090"/>
+        <ben:Code system="SNOMED" value="274022005"/>
+      </ben:MajorDentalServicesOrthodontia>
+    </ben:CopaymentPercentages>
+  </ben:DentalBenefit>
+
+  <!-- Vision Benefits -->
+  <ben:VisionBenefit rdf:about="ActiveEmployeesAndDependents">
+    <ben:CompleteEyeExam networkProvider="100%" nonNetworkProvider="25">
+      <ben:Code system="CPT" value="92004"/>
+      <ben:Code system="CPT" value="92014"/>
+      <ben:Code system="SNOMED" value="1621000133107"/>
+    </ben:CompleteEyeExam>
+    <ben:LensesAndFramesOrContacts networkProvider="100" period="2years" nonNetworkProvider="0">
+      <ben:Code system="HCPCS" value="V2020"/>
+      <ben:Code system="HCPCS" value="V2520"/>
+      <ben:Code system="SNOMED" value="387697009"/>
+    </ben:LensesAndFramesOrContacts>
+    <ben:LasikSurgery networkProvider="250" totalAllowance="500" discount="15%" nonNetworkProvider="250">
+      <ben:Code system="CPT" value="65710"/>
+      <ben:Code system="CPT" value="S0800"/>
+      <ben:Code system="SNOMED" value="384703003"/>
+    </ben:LasikSurgery>
+  </ben:VisionBenefit>
+
+  <!-- Death Benefit -->
+  <ben:DeathBenefit rdf:about="ActiveEmployeesAndTotallyDisabledFormerActiveEmployees">
+    <ben:Amount value="20000"/>
+  </ben:DeathBenefit>
+
+  <!-- Accidental Death & Dismemberment -->
+  <ben:AccidentalDeathDismemberment rdf:about="ActiveEmployeesOnly">
+    <ben:Death value="20000"/>
+    <ben:BothHands value="20000"/>
+    <ben:BothFeet value="20000"/>
+    <ben:OneHandAndOneFoot value="20000"/>
+    <ben:EntireSightBothEyes value="20000"/>
+    <ben:OneHandAndSightOneEye value="20000"/>
+    <ben:OneFootAndSightOneEye value="20000"/>
+    <ben:OneHand value="10000"/>
+    <ben:OneFoot value="10000"/>
+    <ben:SightOneEye value="10000"/>
+  </ben:AccidentalDeathDismemberment>
+</rdf:RDF>
